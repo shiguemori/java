@@ -1,4 +1,4 @@
-package teste;
+package test;
 
 import java.io.*;
 import java.math.*;
@@ -14,8 +14,11 @@ import static java.util.stream.Collectors.toList;
 
 public class Solution {
 
+	/**
+	 * @param sides
+	 * @return
+	 */
 	public static long nearlySimilarRectangles(List<List<Long>> sides) {
-
 		double[] mod = {};
 		sides.forEach(lista -> {
 
@@ -23,10 +26,13 @@ public class Solution {
 				System.out.println(val);
 			});
 		});
-
 		return 0;
 	}
 
+	/**
+	 * @param args
+	 * @throws IOException
+	 */
 	public static void main(String[] args) throws IOException {
 		BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));

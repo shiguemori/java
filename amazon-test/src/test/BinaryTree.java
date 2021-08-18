@@ -1,11 +1,13 @@
-package teste;
+package test;
 
 import java.util.*;
 
 class BinaryTree {
 
-	/*
+	/**
 	 * class Node int data; Node left; Node right;
+	 * @param root
+	 * @return
 	 */
 	static int height(Node root) {
 		if (root == null)
@@ -16,6 +18,11 @@ class BinaryTree {
 		return left > right ? left : right;
 	}
 
+	/**
+	 * @param root
+	 * @param data
+	 * @return
+	 */
 	public static Node insert(Node root, int data) {
 		if (root == null) {
 			return new Node(data);
@@ -32,6 +39,9 @@ class BinaryTree {
 		}
 	}
 
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		System.out.println("Begin");
 		Scanner scan = new Scanner(System.in);

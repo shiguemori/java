@@ -1,4 +1,4 @@
-package teste;
+package test;
 
 import java.util.Collections;
 import java.util.PriorityQueue;
@@ -7,8 +7,11 @@ import java.util.Scanner;
 public class RunningMedian {
 
 	private static PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder()); 
-	private static PriorityQueue<Integer> minHeap = new PriorityQueue<>(); 
+	private static PriorityQueue<Integer> minHeap = new PriorityQueue<>();
 
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		int n = scan.nextInt();
@@ -20,6 +23,9 @@ public class RunningMedian {
 		medianTracker(array);
 	}
 
+	/**
+	 * @param array
+	 */
 	public static void medianTracker(int[] array) {
 		for (int i = 0; i < array.length; i++) {
 			addNumber(array[i]);
@@ -27,6 +33,9 @@ public class RunningMedian {
 		}
 	}
 
+	/**
+	 * @param n
+	 */
 	private static void addNumber(int n) {
 		if (maxHeap.isEmpty()) {
 			maxHeap.add(n);
@@ -47,6 +56,9 @@ public class RunningMedian {
 		}
 	}
 
+	/**
+	 * @return
+	 */
 	private static double getMedian() {
 		if (maxHeap.isEmpty()) {
 			return 0;

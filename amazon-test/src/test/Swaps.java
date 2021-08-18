@@ -1,4 +1,4 @@
-package teste;
+package test;
 
 import java.util.List;
 import java.util.Scanner;
@@ -7,7 +7,12 @@ import static java.util.stream.Collectors.toList;
 
 import java.util.Arrays;
 
-public class teste1 {
+public class Swaps {
+
+	/**
+	 * @param arr
+	 * @return
+	 */
 	static long howManySwaps(List<Integer> arr) {
         List<String> aux = Arrays.asList(arr.toString()
                 .replace("[", "")
@@ -25,6 +30,9 @@ public class teste1 {
 		return count;
 	}
 
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);

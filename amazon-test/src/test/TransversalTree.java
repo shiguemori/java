@@ -1,4 +1,4 @@
-package teste;
+package test;
 
 import java.util.*;
 
@@ -7,7 +7,9 @@ import java.util.*;
  *
  */
 class TransversalTree {
-
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		System.out.println("Begin");
 		Scanner scan = new Scanner(System.in);
@@ -21,6 +23,11 @@ class TransversalTree {
 		levelOrder(root);
 	}
 
+	/**
+	 * @param root
+	 * @param data
+	 * @return
+	 */
 	public static Node insert(Node root, int data) {
 		if (root == null) {
 			return new Node(data);
@@ -37,6 +44,10 @@ class TransversalTree {
 		}
 	}
 
+	/**
+	 * @param n
+	 * @return
+	 */
 	public static int height(Node n) {
 		if (n == null)
 			return 0;
@@ -49,7 +60,10 @@ class TransversalTree {
 
 		return Math.max(lheight, rheight) + 1;
 	}
-	
+
+	/**
+	 * @param root
+	 */
 	public static void levelOrder(Node root) {
 		int h = height(root);
 
@@ -58,6 +72,10 @@ class TransversalTree {
 		}
 	}
 
+	/**
+	 * @param node
+	 * @param desired
+	 */
 	public static void printTreeLevelRec(Node node, int desired) {
 		if (node == null)
 			return;

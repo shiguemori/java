@@ -1,4 +1,4 @@
-package teste;
+package test;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -10,6 +10,10 @@ public class BalancedBrackets {
 
 	private static final Scanner scanner = new Scanner(System.in);
 
+	/**
+	 * @param args
+	 * @throws IOException
+	 */
 	public static void main(String[] args) throws IOException {
 		System.out.println("Begin");
 		File file = new File(System.getenv("OUTPUT_PATH") + "\\estudo_java.txt");

@@ -3,6 +3,11 @@ package newNode;
 import java.util.*;
 
 public class SwapBinaryTree {
+
+	/**
+	 * @param root
+	 * @param K
+	 */
 	public static void swap_nodes(Node root, int K) {
 		if (root != null) {
 			if (root.depth % K == 0) {
@@ -15,6 +20,9 @@ public class SwapBinaryTree {
 		}
 	}
 
+	/**
+	 * @param root
+	 */
 	public static void inorder_print(Node root) {
 		if (root != null) {
 			inorder_print(root.left);
@@ -23,12 +31,19 @@ public class SwapBinaryTree {
 		}
 	}
 
+	/**
+	 * @param root
+	 * @param K
+	 */
 	public static void print_nodes(Node root, int K) {
 		swap_nodes(root, K);
 		inorder_print(root);
 		System.out.println();
 	}
 
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int N = sc.nextInt();
