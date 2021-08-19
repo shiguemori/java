@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
 	<name>Amazon</name>
-	<comment></comment>
+	<comment>This project was created when I had an interview at Amazon, they are some code that I had to do to resolve the
+             challenges and that I did to study</comment>
 	<projects>
 	</projects>
 	<buildSpec>
