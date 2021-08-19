@@ -7,18 +7,17 @@ import org.telegram.telegrambots.exceptions.TelegramApiException;
 import telegram_bot.Domain.TelegramConversas;
 import telegram_bot.Services.WeatherForecast;
 
-public class Main {	
+public class Main {
 
-	public static void main(String[] args) {	
+    public static void main(String[] args) {
+        ApiContextInitializer.init();
+        TelegramBotsApi telegramBotsApi = new TelegramBotsApi();
+        try {
+            telegramBotsApi.registerBot(new HinataBot(new TelegramConversas()));
+//            telegramBotsApi.registerBot(new HinataBot(new WeatherForecast(), new TelegramConversas()));
+        } catch (TelegramApiException e) {
+            e.printStackTrace();
+        }
 
-		ApiContextInitializer.init();
-		TelegramBotsApi telegramBotsApi = new TelegramBotsApi();
-		try {
-			telegramBotsApi.registerBot(new HinataBot(new WeatherForecast(), new TelegramConversas()));
-
-		} catch (TelegramApiException e) {
-			e.printStackTrace();
-		}
-
-	}
+    }
 }
