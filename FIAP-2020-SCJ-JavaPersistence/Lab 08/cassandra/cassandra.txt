@@ -1,8 +1,0 @@
-CREATE KEYSPACE test
-WITH replication = {'class':'SimpleStrategy', 'replication_factor' : 3};
-
-CREATE TABLE Pessoa(
-id text PRIMARY KEY,
-nome text,
-idade varint
-);
